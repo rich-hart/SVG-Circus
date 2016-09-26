@@ -26,4 +26,27 @@ svgCircus.controller('svgCircusCtrl', ['$scope', '$rootScope', '$compile', 'svgC
 
   $scope.appLoaded=true;
 
+  $scope.save=function() {
+    $modal.open({
+      windowClass: 'modal-exportSVG',
+      size: 'lg',
+      controller: function ($scope, $modalInstance, svg) {
+        $scope.svg=svg.svg;
+      },
+      resolve: {
+        svg: function () {
+          return {
+            svg:  svgBuilderSrvc.generateExport()
+          };
+        }
+      },
+      templateUrl: 'modals/export-svg.html'
+    });
+
+    analyticsSrvc.triggerEvent('export','open');
+
+  };
+
+  $scope.appLoaded=true;
+
 }]);
