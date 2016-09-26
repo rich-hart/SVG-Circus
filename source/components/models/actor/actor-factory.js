@@ -40,6 +40,7 @@ svgCircus.factory('ActorFctr', ['ListItemFctr', function (ListItemFctr) {
 
     this.fill='rgba('+Math.floor(Math.random() * 255)+','+Math.floor(Math.random() * 255)+','+Math.floor(Math.random() * 255)+',1)';
     this.fillOpacity='1';
+    debugger;
   };
 
   Actor.prototype = new ListItemFctr();

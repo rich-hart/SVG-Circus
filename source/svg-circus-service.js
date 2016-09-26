@@ -34,6 +34,10 @@ svgCircus.service('svgCircusSrvc', ['ActorListFctr', 'TrickListFctr', 'ScenarioL
     return actorList.addActor();
   };
 
+  this.postActor=function(actor){
+    return null  // actorList.postActor(actor);
+  }
+
   this.duplicateActor=function(actor) {
     return actorList.duplicateActor(actor);
   };
