@@ -8,6 +8,7 @@ To run a local SVG Circus site, and implement new features/updates, fork/clone t
 
 ```
 # Install dependencies
+$ npm install jquery
 $ npm install
 $ bower install
 
